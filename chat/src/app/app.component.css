@@ -1,0 +1,48 @@
+.messages-container {
+  overflow: auto;
+  position: relative;
+  height: 14.5em;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.message-row > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  background-color: beige;
+  border: 0.01em solid black;
+  border-radius: 1em;
+  padding: 0 0.7em 0 0.7em;
+  margin: 0 0.7em 0 0.7em;
+}
+
+.chat-container {
+  border: 0.01em solid black;
+  height: 20em;
+}
+
+#inputMessage {
+  width: 100%;
+}
+
+.sendBnt {
+  border: 0.01em solid black;
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sendBnt:hover {
+  background-color:dimgray;
+}
+
