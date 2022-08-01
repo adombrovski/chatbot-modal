@@ -1,0 +1,10 @@
+<div>
+    <div class="col chat-container" *ngIf="displayModal">
+        <app-message-list [messages]="messages"></app-message-list>
+        <app-new-message-input (sendMessage)="sendMessage($event)"></app-new-message-input>
+    </div>
+    <div 
+        (click)="handleDisplayModal()" 
+        class="chat-bnt d-flex justify-content-center align-items-center"
+    >CHAT</div>
+</div>

@@ -1,0 +1,14 @@
+<div class="row mb-4">
+    <div class="col">
+        <input 
+            id="inputMessage" type="text" placeholder="Say something..." 
+            autocomplete="off" [(ngModel)]='newMessage' (keyup.enter)="handleSendMessage()" 
+        />
+    </div>
+    <div 
+        class="col-4" (click)="handleSendMessage()" 
+        [style.cursor]="newMessage === '' ? 'not-allowed' : 'pointer'"
+    >
+        <div class="sendBnt d-flex justify-content-center align-items-center">SEND</div>
+    </div>
+</div>

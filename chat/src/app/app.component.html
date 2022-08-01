@@ -1,38 +1,4 @@
-<div class="container">
-  <div class="row mt-4">
-    <div class="chat-container col d-flex align-items-end mr-1">
-      <div class="col">
-
-        <div class="row mb-4">
-          <div class="col">
-            <div class="mt-4 messages-container">
-              <div *ngFor="let item of messages, index as i">
-                <div class="message-row d-flex mt-1 mb-1" [style.flexDirection]="item.name === 'you' ? 'row-reverse' : 'row'">
-                  <div>{{item.name}}</div>
-                  <div>:</div>
-                  <div class="message">{{item.message}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mb-4">
-              <div class="col">
-                <input
-                  id="inputMessage" type="text" placeholder="Say something..."
-                  autocomplete="off" [(ngModel)]='newMessage' (keyup.enter)="sendMessage()"
-                />
-              </div>
-              <div
-                class="col-2 col-xl-1"
-                (click)="sendMessage()"
-                [style.cursor]="newMessage === '' ? 'not-allowed' : 'pointer'"
-              >
-              <div class="sendBnt d-flex justify-content-center align-items-center">SEND</div></div>
-        </div>
-
-      </div>
-    </div>
+  <div class="contrainer row">
+    <app-chatmodal></app-chatmodal>
   </div>
-</div>
+

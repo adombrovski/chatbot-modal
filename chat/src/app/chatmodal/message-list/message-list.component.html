@@ -1,0 +1,14 @@
+<div class="row mb-4">
+    <div class="col">
+        <div class="mt-4 messages-container">
+            <div *ngFor="let item of messages, index as i">
+                <div class="message-row d-flex mt-1 mb-1"
+                    [style.flexDirection]="item.name === 'you' ? 'row-reverse' : 'row'">
+                    <div>{{item.name}}</div>
+                    <div>:</div>
+                    <div class="message">{{item.message}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
