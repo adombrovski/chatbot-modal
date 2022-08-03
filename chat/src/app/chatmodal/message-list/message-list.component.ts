@@ -6,11 +6,6 @@ import { ChatMessage } from 'src/app/types';
   templateUrl: './message-list.component.html',
   styleUrls: ['./message-list.component.css']
 })
-export class MessageListComponent implements OnInit {
+export class MessageListComponent {
   @Input() messages: ChatMessage[];
-  
-  //Added since typescript complaining 
-  constructor() { this.messages = [] }
-
-  ngOnInit(): void {}
 }

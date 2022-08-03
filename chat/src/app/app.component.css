@@ -1,5 +1,8 @@
-.contrainer {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+.chat-bnt {
+    position: fixed;
+    bottom: 3em;
+    right: 8em;
+    height: 2em;
+    width: 6em;
+    cursor: pointer;
 }

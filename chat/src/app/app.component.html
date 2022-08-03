@@ -1,4 +1,9 @@
-  <div class="contrainer row">
-    <app-chatmodal></app-chatmodal>
-  </div>
+  <main>
+    <app-chatmodal *ngIf="displayModal"></app-chatmodal>
+    <button 
+      (click)="handleDisplayModal()" 
+      class="chat-bnt basic-bnt d-flex justify-content-center align-items-center"
+      role="toolbar"
+    >chat</button>
+  </main>
 
