@@ -1,8 +1,9 @@
 #inputMessage {
     width: 100%;
+    margin-right: 0.3em;
 }
 
-.sendBnt:hover {
+.send-bnt:hover {
     background-color: dimgray;
 }
 

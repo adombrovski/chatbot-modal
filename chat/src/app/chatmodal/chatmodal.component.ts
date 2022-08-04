@@ -32,7 +32,7 @@ export class ChatmodalComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.webSocketSubscription?.unsubscribe();
+    this.webSocketSubscription.unsubscribe();
   }
 
   sendMessage = (newMessage: message): void => {
