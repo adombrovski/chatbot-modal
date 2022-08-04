@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ChatMessage } from 'src/app/types';
 
 @Component({
@@ -7,5 +8,5 @@ import { ChatMessage } from 'src/app/types';
   styleUrls: ['./message-list.component.css']
 })
 export class MessageListComponent {
-  @Input() messages: ChatMessage[];
+  @Input() messages: Observable<ChatMessage[]>;
 }

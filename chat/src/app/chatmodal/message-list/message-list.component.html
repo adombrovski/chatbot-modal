@@ -1,5 +1,5 @@
 <div class="messages-container">
-    <div *ngFor="let item of messages, index as i">
+    <div *ngFor="let item of messages | async, index as i">
         <div class="message-row" [style.flexDirection]="item.name === 'you' ? 'row-reverse' : 'row'">
             <div>{{item.name}}</div>
             <div>:</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { ChatMessage, message } from '../types';
 import { ChatmodalService } from './chatmodal.service';
 import { WebSocketService } from './web-socket.service';
@@ -14,9 +14,8 @@ import { WebSocketService } from './web-socket.service';
   ]
 })
 export class ChatmodalComponent implements OnInit, OnDestroy {
-  messages: ChatMessage[] = [];
+  messages: Observable<ChatMessage[]>;
   webSocketSubscription: Subscription;
-  chatmodalServiceSubscription: Subscription;
 
   constructor(
     private socket: WebSocketService,
@@ -29,12 +28,11 @@ export class ChatmodalComponent implements OnInit, OnDestroy {
         this.chatmodalService.addMessages({ name: 'bot', message: data.outputMessage })
       }, 500)
     );
-    this.chatmodalServiceSubscription = this.chatmodalService.getMessages().subscribe(data => this.messages = data);
+    this.messages = this.chatmodalService.getMessages();
   }
 
   ngOnDestroy(): void {
     this.webSocketSubscription?.unsubscribe();
-    this.chatmodalServiceSubscription?.unsubscribe();
   }
 
   sendMessage = (newMessage: message): void => {
