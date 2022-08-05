@@ -5,15 +5,5 @@
   position: fixed;
   bottom: 7em;
   right: 2em;
-  padding: 1em;
-}
-
-.chat-bnt{
-  position: fixed;
-  bottom: 3em;
-  right: 8em;
-  border-radius: 1em;
-  border: 0.01em solid black;
-  height: 2em;
-  width: 6em;
+  padding: 1em 1em 0em 1em;
 }

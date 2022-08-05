@@ -1,13 +1,21 @@
-#inputMessage {
+.input-message {
     width: 100%;
-    margin-right: 0.3em;
-}
-
-.send-bnt:hover {
-    background-color: dimgray;
+    height: 100%;
 }
 
 .form-input {
     display: flex;
-    margin-top: 0.5em;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.9em;
+    height: 3em
+}
+
+.form-input > button {
+    width: 30%;
+    margin-left: 0.5em;
+}
+
+.form-input > button:hover {
+    background-color: dimgray;
 }
